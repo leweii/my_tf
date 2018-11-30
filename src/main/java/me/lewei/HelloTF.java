@@ -1,5 +1,14 @@
+package me.lewei;
+
+import org.tensorflow.Graph;
+import org.tensorflow.Session;
+import org.tensorflow.Tensor;
+import org.tensorflow.TensorFlow;
+
 public class HelloTF {
     public static void main(String[] args) throws Exception {
+        System.out.println("TensorFlowExample using TensorFlow version: " + TensorFlow.version());
+
         try (Graph g = new Graph()) {
             final String value = "Hello from " + TensorFlow.version();
 
